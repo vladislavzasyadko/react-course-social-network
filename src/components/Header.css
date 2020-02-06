@@ -1,0 +1,12 @@
+.app-header {
+  color: #87dd1a;
+  padding: 1%;
+  grid-area: header;
+  background: #282c34;
+}
+
+.header-image {
+  margin: auto;
+  padding: 10px;
+  overflow: auto;
+}
