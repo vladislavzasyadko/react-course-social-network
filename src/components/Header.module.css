@@ -1,0 +1,14 @@
+.content {
+    color: #87dd1a;
+    padding: 1%;
+    grid-area: header;
+    background: #282c34;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.image {
+    margin: auto;
+    padding: 10px;
+    overflow: auto;
+}

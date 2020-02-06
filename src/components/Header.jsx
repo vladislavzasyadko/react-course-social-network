@@ -1,12 +1,12 @@
 import React from 'react';
-import "./Header.css";
+import hmodule from "./Header.module.css";
 import emojiImage from '../img/cursedleft.png';
 
 const Header = () => {
   return (
-    <header className="app-header">
+    <header className={hmodule.content}>
       <img
-        className="header-image"
+        className={hmodule.image}
         src = {emojiImage}
         sec="http://cuturl.herokuapp.com/a6be19d2"
         height="90"

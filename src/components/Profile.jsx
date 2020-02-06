@@ -1,11 +1,11 @@
 import React from "react";
-import './Profile.css';
+import pmodule from './Profile.module.css';
 
 import emojiLove from '../img/love.webp';
 
 const Profile = () => {
   return (
-    <div className="app-content">
+    <div className={pmodule.content}>
       <img
         src={emojiLove}
         height="90"

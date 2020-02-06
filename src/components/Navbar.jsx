@@ -1,23 +1,23 @@
 import React from "react";
-import "./Navbar.css";
+import nmodule from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="app-nav">
-      <div className="nav-content">
-        <a className='nav-links'>Profile</a>
+    <nav className={nmodule.nav}>
+      <div className={nmodule.content}>
+        <a className={nmodule.links}>Profile</a>
       </div>
-      <div className="nav-content">
-        <a className='nav-links'>Messages</a>
+      <div className={nmodule.content}>
+        <a className={nmodule.links}>Messages</a>
       </div>
-      <div className="nav-content">
-        <a className='nav-links'>Chats</a>
+      <div className={nmodule.content}>
+        <a className={nmodule.links}>Chats</a>
       </div>
-      <div className="nav-content">
-        <a className='nav-links'>Friends</a>
+      <div className={nmodule.content}>
+        <a className={nmodule.links}>Friends</a>
       </div>
-      <div className="nav-content">
-        <a className='nav-links'>Settings</a>
+      <div className={nmodule.content}>
+        <a className={nmodule.links}>Settings</a>
       </div>
     </nav>
   );
