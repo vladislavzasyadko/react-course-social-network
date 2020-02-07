@@ -1,7 +1,8 @@
 import React from "react";
 import pmodule from './Profile.module.css';
 
-import emojiLove from '../img/love.webp';
+import emojiLove from '../../img/love.webp';
+import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
   return (
@@ -12,11 +13,7 @@ const Profile = () => {
         width="90"
       />
       <div> avatar + description</div>
-      <div>
-        My posts
-        <div>New post</div>
-        <div>Post</div>
-      </div>
+      <MyPosts />
     </div>
   );
 };
