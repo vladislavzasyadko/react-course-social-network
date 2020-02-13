@@ -1,5 +1,5 @@
 import React from "react";
-import pmodule from './MyPosts.module.css';
+import mpmodule from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = () => {
@@ -7,9 +7,9 @@ const MyPosts = () => {
       <div>
         My posts
         <div>New post</div>
-        <div className={pmodule.posts}>
-          <Post />
-
+        <div>
+          <Post message='Hello!' likeCount={20} />
+          {/* <Post message='Welcome to my page!' likeCount={15} /> */}
         </div>
       </div>
   );

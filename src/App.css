@@ -1,17 +1,26 @@
 body {
-    background-color: #EDEEF0;
+    background-color: #060c1d;
 }
 
 .app-wrapper {
     opacity: 0.9;
     margin: auto;
-    margin-top: 0.5%;
-    width: 80%;
+    margin-top: 5px;
+    width: 90%;
     display: grid;
     grid-template-areas: "header header" "nav content";
-    grid-template-rows: 0.4fr 1fr;
+    grid-template-rows: 0.2fr 2fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
     font-size: 23px;
     justify-content: center;
+}
+
+.app-wrapper-content {
+    grid-area: content;
+    color: #ffffff;
+    background-color: #060c1d;
+    border: solid;
+    border-width: 1px 0;
+    border-color: #ffffff;
 }

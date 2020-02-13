@@ -4,14 +4,9 @@ import pmodule from './Profile.module.css';
 import emojiLove from '../../img/love.webp';
 import MyPosts from "./MyPosts/MyPosts";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <div className={pmodule.content}>
-      <img
-        src={emojiLove}
-        height="90"
-        width="90"
-      />
+    <div>
       <div> avatar + description</div>
       <MyPosts />
     </div>

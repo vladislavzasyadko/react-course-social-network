@@ -1,10 +1,23 @@
 .content {
-    color: #87dd1a;
-    padding: 1%;
+    color: #ffffff;
+    padding: 5px;
     grid-area: header;
-    background: #282c34;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #060c1d;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: solid;
+    border-width: 1px 0;
+    border-color: #ffffff;
+}
+
+.logo {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-width: 1px 0;
+    border-color: #ffffff;
 }
 
 .image {

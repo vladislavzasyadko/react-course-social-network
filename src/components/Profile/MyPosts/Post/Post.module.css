@@ -1,12 +1,28 @@
 .item {
-    border-radius: 5px;
-    background-color: #0d0d13;
     margin: 5px;
-    padding: 5px;
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1px 0;
 }
 
 .item img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    padding: 7px;
+}
+
+.post_text {
+    display: inline-block;
+}
+
+.likes {
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    width: max-content;
+    opacity: 0.8;
+    border: solid;
+    border-width: 1px;
+    border-color: #ffffff;
 }
