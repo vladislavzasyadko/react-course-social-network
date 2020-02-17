@@ -3,11 +3,12 @@ import pmodule from './Profile.module.css';
 
 import emojiLove from '../../img/love.webp';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
   return (
     <div>
-      <div> avatar + description</div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   );

@@ -23,13 +23,13 @@
     border-color: #ffffff;
 }
 
-.links {
+.content a {
     padding: auto;
+    display: block;
     text-decoration: none;
     color: #ffffff;
-    display: block;
 }
 
-.links:active {
-    text-decoration: none;
+.content a.activeLink {
+    color: #2345a1;
 }

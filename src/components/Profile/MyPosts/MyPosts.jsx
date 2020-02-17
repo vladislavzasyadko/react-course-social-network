@@ -3,15 +3,29 @@ import mpmodule from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = () => {
+  let posts = [
+    { message: "Hello!", likeCount: 20 },
+    { message: "Welcome to my page!", likeCount: 15 },
+    { message: "REEEEEEEEEEEEEEEEE", likeCount: 1 },
+  ]
+
+  let postElements = posts
+    .map(post => <Post message={post.message} likeCount={post.likeCount} />)
+
   return (
+    <div>
+      <h3>My posts</h3>
+      <div>New post</div>
       <div>
-        My posts
-        <div>New post</div>
+        <textarea placeholder='Let me tell u about...'></textarea>
         <div>
-          <Post message='Hello!' likeCount={20} />
-          {/* <Post message='Welcome to my page!' likeCount={15} /> */}
+          <button>post it!</button>
         </div>
       </div>
+      <div>
+        {postElements}
+      </div>
+    </div>
   );
 };
 
