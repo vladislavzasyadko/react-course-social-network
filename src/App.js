@@ -9,14 +9,23 @@ import Dialogs from "./components/Dialogs/Dialogs.jsx";
 
 
 const App = (props) => {
-    return ( 
+    return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header />
                 <Navbar />
                 <div className='app-wrapper-content'>
-                    <Route render={() => <Profile posts={props.appState.profileData.posts} />} path='/profile' />
-                    <Route render={() => <Dialogs dialogsData={props.appState.dialogsData} />} path='/dialogs' />
+                    <Route render={() =>
+                        <Profile
+                            posts={props.appState.profileData.posts}
+                            addPost={props.addPost} />}
+                        path='/profile'
+                    />
+                    <Route render={() =>
+                        <Dialogs
+                            dialogsData={props.appState.dialogsData} />}
+                        path='/dialogs'
+                    />
                 </div>
             </div>
         </BrowserRouter>

@@ -1,0 +1,10 @@
+textarea {
+    color: #76dfff;
+    background-color: #000f2e;
+    border-radius: 10px;
+    min-width: 50px;
+    min-height: 40px;
+    border: none;
+    padding: 1pc;
+    margin: 1rem;
+}
