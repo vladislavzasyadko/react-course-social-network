@@ -6,8 +6,10 @@ const DialogItem = (props) => {
   let path = `/dialogs/${props.id}`
   return (
     <div className={dmodule.dialogItem}>
-          <NavLink activeClassName={dmodule.activeLink} to={path}> {props.name} </NavLink>
-        </div>
+      <NavLink activeClassName={dmodule.activeLink} to={path}>
+        {props.name}
+      </NavLink>
+    </div>
   );
 }
 
