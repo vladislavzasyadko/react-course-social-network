@@ -30,23 +30,33 @@ let store = {
     _callSubscriber() {
         console.log("State changed");
     },
-    addPost() {
+    subscriber(observer) {
+        this._callSubscriber = observer;
+    },
+    _addPost() {
         let newPost = {
             id: 5,
             message: this._state.profileData.newPostText,
             likeCount: 0
         }
-        this._state.profileData.posts.unshift(newPost);
-        this._state.profileData.newPostText ='';
+        if(newPost.message.trim() !== ''){
+            this._state.profileData.posts.unshift(newPost);
+            this._state.profileData.newPostText ='';
+        }
         this._callSubscriber(this._state);
     },
-    updatePostText(newText) {
+    _updatePostText(newText) {
         this._state.profileData.newPostText = newText;
         this._callSubscriber(this._state);
     },
-    subscriber(observer) {
-        this._callSubscriber = observer;
+    dispatch(action) {
+        if(action.type === 'ADD-POST'){
+            this._addPost();
+        }else if(action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._updatePostText(action.newText);
+        }
     }
+    
 } 
 window.store = store; 
 
