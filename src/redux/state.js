@@ -8,6 +8,7 @@ let state = {
             { message: "REEEEEEEEEEEEEEEEE", likeCount: 1 },
             { message: "one more ", likeCount: 100 },
         ],
+        newPostText:'sample data',
     },
     dialogsData:{
         dialogs:[
@@ -25,13 +26,20 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profileData.newPostText,
         likeCount: 0
     }
     state.profileData.posts.unshift(newPost);
+    state.profileData.newPostText ='';
     rerenderEntireTree(state);
 }
+
+export let updatePostText = (newText) => {
+    state.profileData.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
 export default state
