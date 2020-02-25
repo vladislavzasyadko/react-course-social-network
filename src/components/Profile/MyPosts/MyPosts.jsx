@@ -1,7 +1,7 @@
 import React from "react";
 import mpmodule from './MyPosts.module.css';
 import Post from "./Post/Post";
-import { addPostActionCreator, updateNewPostText } from "../../../redux/state";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../redux/state";
 
 const MyPosts = (props) => {
 
@@ -16,7 +16,7 @@ const MyPosts = (props) => {
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = updateNewPostText(text);
+    let action = updateNewPostTextActionCreator(text);
     props.dispatch(action);
   }
 
@@ -26,7 +26,8 @@ const MyPosts = (props) => {
       <h3>My posts</h3>
       <div>New post</div>
       <div>
-        <textarea ref={newPostElement}
+        <textarea className={mpmodule.input_text}
+          ref={newPostElement}
           placeholder='Let me tell u about...'
           value={props.newPostText}
           onChange={onPostChange}>

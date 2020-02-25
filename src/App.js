@@ -23,7 +23,8 @@ const App = (props) => {
                     />
                     <Route render={() =>
                         <Dialogs
-                            dialogsData={props.appState.dialogsData} />}
+                            dialogsData={props.appState.dialogsData}
+                            dispatch={props.dispatch} />}
                         path='/dialogs'
                     />
                 </div>
