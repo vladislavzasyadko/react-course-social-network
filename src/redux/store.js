@@ -34,7 +34,7 @@ let store = {
     _callSubscriber() {//later will be rerendering tree method
         console.log("State changed");
     },
-    subscriber(observer) {
+    subscribe(observer) {
         this._callSubscriber = observer;
     },
     dispatch(action) {
