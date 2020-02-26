@@ -1,6 +1,10 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+
 const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let store = {
@@ -71,20 +75,11 @@ let store = {
         this._callSubscriber(this._state);
     },
     dispatch(action) {
-        // switch(action){
-        //     case ADD_POST:
-        //         this._addPost();
-        //         break;
-        // }
-        if(action.type === ADD_POST){
-            this._addPost();
-        }else if(action.type === UPDATE_NEW_POST_TEXT) {
-            this._updatePostText(action.newText);
-        } else if(action.type === UPDATE_NEW_MESSAGE_BODY){
-            this._updateMessageBody(action.messageBody);
-        } else if(action.type === SEND_MESSAGE){
-            this._sendMessage();
-        }
+        
+        this._state.profileData = profileReducer(this._state.profileData, action);
+        this._state.dialogsData = dialogsReducer(this._state.dialogsData, action);
+
+        this._callSubscriber(this._state);
     }
     
 }
@@ -96,12 +91,7 @@ export const updateNewPostTextActionCreator = (text) => ({
         newText: text,
 })
 
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
 
-export const updateNewMessageBodyCreator = (message) => ({
-        type: UPDATE_NEW_MESSAGE_BODY,
-        messageBody: message,
-})
 
 
 window.store = store; 
