@@ -1,12 +1,6 @@
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-
-const SEND_MESSAGE = 'SEND-MESSAGE';
-
 let store = {
     _state: {
         profileData:{
@@ -43,37 +37,6 @@ let store = {
     subscriber(observer) {
         this._callSubscriber = observer;
     },
-    _addPost() {
-        let newPost = {
-            id: 5,
-            message: this._state.profileData.newPostText,
-            likeCount: 0
-        }
-        if(newPost.message.trim() !== ''){
-            this._state.profileData.posts.unshift(newPost);
-            this._state.profileData.newPostText ='';
-        }
-        this._callSubscriber(this._state);
-    },
-    _sendMessage() {
-        let newMessage = {
-            id: 5,
-            message: this._state.dialogsData.newMessageBody,
-        }
-        if(newMessage.message.trim() !== ''){
-            this._state.dialogsData.messages.push(newMessage);
-            this._state.dialogsData.newMessageBody ='';
-        }
-        this._callSubscriber(this._state);
-    },
-    _updatePostText(newText) {
-        this._state.profileData.newPostText = newText;
-        this._callSubscriber(this._state);
-    },
-    _updateMessageBody(messageBody){
-        this._state.dialogsData.newMessageBody = messageBody;
-        this._callSubscriber(this._state);
-    },
     dispatch(action) {
         
         this._state.profileData = profileReducer(this._state.profileData, action);
@@ -83,16 +46,6 @@ let store = {
     }
     
 }
-
-export const addPostActionCreator = () => ({type: ADD_POST})
-
-export const updateNewPostTextActionCreator = (text) => ({
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text,
-})
-
-
-
 
 window.store = store; 
 
