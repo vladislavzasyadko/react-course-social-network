@@ -6,6 +6,7 @@ import Header from "./components/Header/Header.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import Dialogs from "./components/Dialogs/Dialogs.jsx";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => {
@@ -17,14 +18,12 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route render={() =>
                         <Profile
-                            state={props.appState.profileData}
-                            dispatch={props.dispatch} />}
+                            store={props.store} />}
                         path='/profile'
                     />
                     <Route render={() =>
-                        <Dialogs
-                            dialogsData={props.appState.dialogsData}
-                            dispatch={props.dispatch} />}
+                        <DialogsContainer
+                            store={props.store} />}
                         path='/dialogs'
                     />
                 </div>
