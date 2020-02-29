@@ -5,8 +5,9 @@ import { BrowserRouter, Route } from "react-router-dom"
 import Header from "./components/Header/Header.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Profile from "./components/Profile/Profile.jsx";
-import Dialogs from "./components/Dialogs/Dialogs.jsx";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import Users from "./components/Users/Users";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 const App = (props) => {
@@ -27,6 +28,11 @@ const App = (props) => {
                             // store={props.store} 
                             />}
                         path='/dialogs'
+                    />
+                    <Route render={() =>
+                        <UsersContainer
+                            />}
+                        path='/users'
                     />
                 </div>
             </div>

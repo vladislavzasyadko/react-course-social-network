@@ -18,6 +18,9 @@ const Navbar = () => {
         <NavLink to='/friends' activeClassName={nmodule.activeLink}>Friends</NavLink>
       </div>
       <div className={nmodule.content}>
+        <NavLink to='/users' activeClassName={nmodule.activeLink}>Users</NavLink>
+      </div>
+      <div className={nmodule.content}>
         <NavLink to='/settings' activeClassName={nmodule.activeLink}>Settings</NavLink>
       </div>
     </nav>
