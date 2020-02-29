@@ -1,5 +1,5 @@
 body {
-    background-color: #060c1d;
+    background-color: #d8dce7;
 }
 
 .app-wrapper {
@@ -19,9 +19,6 @@ body {
 .app-wrapper-content {
     grid-area: content;
     color: #ffffff;
-    background-color: #060c1d;
-    border: solid;
-    border-width: 1px 0;
-    border-color: #ffffff;
+    background-color: #6daffe;
     padding: 10px;
 }

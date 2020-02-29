@@ -3,3 +3,37 @@
     width: 80px;
     border-radius: 50%;
 }
+
+.userWidget {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    margin: 10px;
+    background-color: #cce0f8;
+    color: #134879;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.userButton {
+    color: #d8d8d8;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: 80px;
+    background: #437fc7;
+    box-shadow:  -3px 3px 7px #4e91b8;
+    font-weight: bold;
+
+}
+.userButton:hover {
+    background-color: #3b6dac ;
+}
+
+.avatarWidget {
+    grid-column: 1;
+}
+
+.bioWidget {
+    grid-column: 2;
+}
+

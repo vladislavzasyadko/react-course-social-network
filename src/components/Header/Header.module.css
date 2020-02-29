@@ -1,27 +1,29 @@
 .content {
-    color: #ffffff;
-    padding: 5px;
     grid-area: header;
-    background-color: #060c1d;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    border: solid;
-    border-width: 1px 0;
-    border-color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #6daffe;
 }
 
 .logo {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    border: solid;
-    border-width: 1px 0;
-    border-color: #ffffff;
+    color: #e2e2e2;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
 }
 
-.image {
-    margin: auto;
-    padding: 10px;
-    overflow: auto;
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #e2e2e2;
+    margin: 5px;
+    transition: all 0.3s ease;
 }

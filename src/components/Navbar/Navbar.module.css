@@ -1,35 +1,27 @@
 .nav {
     grid-area: nav;
     color: #d3d3d3;
-    background-color: #060c1d;
-    border: solid;
-    border-width: 0 1px;
-    border-color: #ffffff;
+    background-color: #6daffe;
 }
 
 .content {
     margin: 5%;
-    background-color: #060c1d;
+    background-color: #cce0f8;
     padding: 3%;
     opacity: 0.8;
-    border: solid;
-    border-width: 0 1px;
-    border-color: #03030e;
 }
 
 .content:hover {
-    border: solid;
-    border-width: 0 1px;
-    border-color: #ffffff;
+    background-color: #c1d9f6;
 }
+
 
 .content a {
     padding: auto;
     display: block;
     text-decoration: none;
-    color: #ffffff;
-}
-
-.content a.activeLink {
-    color: #2345a1;
+    color: #134879;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
