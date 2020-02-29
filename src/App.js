@@ -24,7 +24,8 @@ const App = (props) => {
                     />
                     <Route render={() =>
                         <DialogsContainer
-                            store={props.store} />}
+                            // store={props.store} 
+                            />}
                         path='/dialogs'
                     />
                 </div>
