@@ -10,7 +10,7 @@ let store = {
                 { message: "REEEEEEEEEEEEEEEEE", likeCount: 1 },
                 { message: "one more ", likeCount: 100 },
             ],
-            newPostText:'sample data',
+            newPostText:'',
         },
         dialogsData:{
             dialogs:[
@@ -25,7 +25,7 @@ let store = {
                 { id: 3, message: 'Waduuuup', },
                 { id: 4, message: 'hella fuego', },
             ],
-            newMessageBody: "",
+            newMessageBody: '',
         }
     },
     getState() {
