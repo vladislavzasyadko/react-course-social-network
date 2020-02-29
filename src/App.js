@@ -18,7 +18,8 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route render={() =>
                         <Profile
-                            store={props.store} />}
+                            // store={props.store} 
+                            />}
                         path='/profile'
                     />
                     <Route render={() =>
