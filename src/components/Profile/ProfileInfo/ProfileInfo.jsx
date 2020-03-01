@@ -1,5 +1,5 @@
 import React from "react";
-import pmodule from './ProfileInfo.module.css';
+//import pmodule from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
   return (

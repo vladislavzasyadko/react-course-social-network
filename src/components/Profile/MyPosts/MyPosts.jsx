@@ -1,5 +1,5 @@
 import React from "react";
-import mpmodule from './MyPosts.module.css';
+import mpmodule from './MyPosts.module.scss';
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {

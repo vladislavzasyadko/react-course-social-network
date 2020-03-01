@@ -1,7 +1,11 @@
+@import '../../../styles';
+
 .input_text {
-    color: #76dfff;
-    background-color: #000f2e;
+    color: $primary-text-color;
+    background-color: $light-color;
     border-radius: 10px;
+
+    width:60%;
     min-width: 50px;
     min-height: 40px;
     border: none;

@@ -1,3 +1,5 @@
+@import 'styles';
+
 body {
     background-color: #d8dce7;
 }
@@ -19,6 +21,6 @@ body {
 .app-wrapper-content {
     grid-area: content;
     color: #ffffff;
-    background-color: #6daffe;
+    background-color: $primary-color;
     padding: 10px;
 }

@@ -1,3 +1,5 @@
+@import '../../styles';
+
 .profilePic {
     height: 80px;
     width: 80px;
@@ -8,10 +10,13 @@
     display: grid;
     grid-template-columns: 100px 200px;
     margin: 10px;
-    background-color: #cce0f8;
+    background-color: $light-color;
     color: #134879;
     border-radius: 10px;
     padding: 10px;
+}
+
+.userWidget:hover {
 }
 
 .userButton {
@@ -20,14 +25,22 @@
     padding: 10px;
     border: none;
     width: 80px;
-    background: #437fc7;
-    box-shadow:  -3px 3px 7px #4e91b8;
+    background: $secondary-color;
+    box-shadow:  -3px 3px 7px $primary-color;
     font-weight: bold;
+    transition: .3s;
+}
 
-}
 .userButton:hover {
-    background-color: #3b6dac ;
+    cursor: pointer;
+    box-shadow: 5px 5px $primary-color;
+    transition: .3s;
 }
+
+.userButton:active {
+    box-shadow: none;
+    transition: .3s;
+  }
 
 .avatarWidget {
     grid-column: 1;

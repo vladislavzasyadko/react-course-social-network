@@ -1,18 +1,21 @@
+@import '../../styles';
+
 .nav {
     grid-area: nav;
     color: #d3d3d3;
-    background-color: #6daffe;
+    background-color: $primary-color;
 }
 
 .content {
     margin: 5%;
-    background-color: #cce0f8;
+    background-color: $light-color;
     padding: 3%;
     opacity: 0.8;
+    border-radius: 5px;
 }
 
 .content:hover {
-    background-color: #c1d9f6;
+    opacity: 1;
 }
 
 

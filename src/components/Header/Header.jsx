@@ -1,6 +1,5 @@
 import React from 'react';
-import hmodule from "./Header.module.css";
-import emojiImage from '../../img/cursedleft.png';
+import hmodule from "./Header.module.scss";
 
 const Header = () => {
   return (
