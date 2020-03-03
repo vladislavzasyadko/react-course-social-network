@@ -1,10 +1,11 @@
 import React from 'react';
 import preloader from './../../../img/loader2.gif'
+import pmodule from './Preloader.module.scss'
 
 
 let Preloader = (props) => {
-    return <div>
-        <img height='50' width='50' src={preloader} />
+    return <div className={pmodule.divPreload}>
+        <img alt='#' className={pmodule.preloader} src={preloader} />
     </div>
 }
 

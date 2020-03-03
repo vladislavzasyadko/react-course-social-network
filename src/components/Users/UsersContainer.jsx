@@ -2,8 +2,8 @@ import React from 'react'
 import * as axios from 'axios'
 import { connect } from 'react-redux'
 import {
-    followActionCreator, unfollowActionCreator, setUsersActionCreator,
-    setCurrentPageActionCreator, setTotalUsersCountActionCreator, toggleIsFetchingActionCreator,
+    follow, unfollow, setUsers,
+    setCurrentPage, setTotalUsersCount, toggleIsFetching,
 } from '../../redux/usersReducer'
 import Users from './Users'
 import Preloader from '../Common/Preloader/Preloader'
@@ -60,26 +60,34 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followActionCreator(userId));
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowActionCreator(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersActionCreator(users))
-        },
-        setCurrentPage: (currentPage) => {
-            dispatch(setCurrentPageActionCreator(currentPage))
-        },
-        setTotalUsersCount: (totalCount) => {
-            dispatch(setTotalUsersCountActionCreator(totalCount))
-        },
-        toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingActionCreator(isFetching))
-        },
-    }
-}
-export default UsersContainer = connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         follow: (userId) => {
+//             dispatch(followActionCreator(userId));
+//         },
+//         unfollow: (userId) => {
+//             dispatch(unfollowActionCreator(userId));
+//         },
+//         setUsers: (users) => {
+//             dispatch(setUsersActionCreator(users))
+//         },
+//         setCurrentPage: (currentPage) => {
+//             dispatch(setCurrentPageActionCreator(currentPage))
+//         },
+//         setTotalUsersCount: (totalCount) => {
+//             dispatch(setTotalUsersCountActionCreator(totalCount))
+//         },
+//         toggleIsFetching: (isFetching) => {
+//             dispatch(toggleIsFetchingActionCreator(isFetching))
+//         },
+//     }
+// }
+
+export default UsersContainer = connect(mapStateToProps, {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    toggleIsFetching,
+})(UsersContainer);
