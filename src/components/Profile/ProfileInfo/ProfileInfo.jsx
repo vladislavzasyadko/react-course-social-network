@@ -8,10 +8,9 @@ const ProfileInfo = (props) => {
   }
   return (
     <div>
-      <div><img src={props.profile.photos.large} alt="#" /></div>
+      <div><img src={props.profile.photos.large} alt="" /></div>
       <div>{props.profile.aboutMe}</div>
       <div>{props.profile.fullName}</div>
-      <div>{props.profile.contacts}</div>
     </div>
   );
 };
