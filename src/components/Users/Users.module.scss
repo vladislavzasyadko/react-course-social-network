@@ -6,6 +6,18 @@
     border-radius: 50%;
 }
 
+span {
+    cursor: pointer;
+}
+
+.selectedPage {
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    border: solid;
+    border-color: $secondary-color;
+}
+
 .userWidget {
     display: grid;
     grid-template-columns: 100px 200px;
