@@ -4,7 +4,7 @@ import './components/ScreenSizing.css';
 import { BrowserRouter, Route } from "react-router-dom"
 import Header from "./components/Header/Header.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import Profile from "./components/Profile/Profile.jsx";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 
@@ -17,7 +17,7 @@ const App = (props) => {
                 <Navbar />
                 <div className='app-wrapper-content'>
                     <Route render={() =>
-                        <Profile
+                        <ProfileContainer
                             // store={props.store} 
                             />}
                         path='/profile'
