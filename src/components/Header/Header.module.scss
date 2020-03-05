@@ -18,7 +18,7 @@
 
 
 .burger {
-    display: none;
+    // display: none;
     cursor: pointer;
 }
 
@@ -28,4 +28,15 @@
     background-color: #e2e2e2;
     margin: 5px;
     transition: all 0.3s ease;
+}
+
+.loginBlock {
+    cursor: pointer;
+    float: right;
+}
+
+.loginLink {
+
+    color: #e2e2e2;
+    text-decoration: none;
 }

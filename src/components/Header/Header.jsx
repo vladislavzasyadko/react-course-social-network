@@ -1,7 +1,8 @@
 import React from 'react';
 import hmodule from "./Header.module.scss";
+import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className={hmodule.content}>
       <div className={hmodule.burger}>
@@ -10,7 +11,13 @@ const Header = () => {
         <div className={hmodule.line3}></div>
       </div>
       <div className={hmodule.logo}>
-      Social Web
+        Social Web
+      </div>
+
+      <div className={hmodule.loginBlock}>
+        {props.isAuth ? props.login :
+          <NavLink className={hmodule.loginLink} to={'/login'} >Login</NavLink>
+        }
       </div>
 
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import './components/ScreenSizing.css';
 import { BrowserRouter, Route } from "react-router-dom"
-import Header from "./components/Header/Header.jsx";
+import HeaderContainer from "./components/Header/HeaderContainer";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
@@ -13,7 +13,7 @@ const App = (props) => {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
-                <Header />
+                <HeaderContainer />
                 <Navbar />
                 <div className='app-wrapper-content'>
                     <Route render={() =>
