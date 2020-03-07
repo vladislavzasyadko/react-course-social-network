@@ -52,7 +52,11 @@ span {
 .userButton:active {
     box-shadow: none;
     transition: .3s;
-  }
+}
+
+.userButton:disabled {
+    background-color: red;
+}
 
 .avatarWidget {
     grid-column: 1;
