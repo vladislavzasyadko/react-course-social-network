@@ -4,7 +4,7 @@ let instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
     headers: {
-        "API-KEY": 'c008536c-789e-46d3-8bb3-cdbddda9e73e', //'8e9ee1e6-5deb-41eb-a54b-cd03fc3e6240' for vladislavvv
+        "API-KEY": '8e9ee1e6-5deb-41eb-a54b-cd03fc3e6240', //  <-for vladislavvv ||'c008536c-789e-46d3-8bb3-cdbddda9e73e' <- not for vladislavvv
     },
 })
 
@@ -26,5 +26,15 @@ export const usersAPI = {
                 ${userId}`, {
             withCredentials: true,
         }).then(response => response.data.resultCode)
+    },
+}
+
+export const loginAPI = {
+    login() {
+        return instance.get('auth/me',
+            {
+                withCredentials: true,//Cookies required
+            })
+            .then(response => response)
     },
 }
