@@ -19,7 +19,8 @@ export const usersAPI = {
         return instance.delete(`follow/
             ${userId}`, {
             withCredentials: true,
-        }).then(response => response.data)//??
+        })
+        //.then(response => response.data)//??
     },
     follow(userId) {
         return instance.post(`follow/
@@ -27,6 +28,9 @@ export const usersAPI = {
             withCredentials: true,
         }).then(response => response.data.resultCode)
     },
+    getProfile(userId){
+        return instance.get(`profile/${userId}`);
+    }
 }
 
 export const loginAPI = {
@@ -34,7 +38,7 @@ export const loginAPI = {
         return instance.get('auth/me',
             {
                 withCredentials: true,//Cookies required
-            })
-            .then(response => response)
+            });
+            //.then(response => response)
     },
 }
