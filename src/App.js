@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import Login from "./components/Login/Login";
 
 
 const App = (props) => {
@@ -32,6 +33,11 @@ const App = (props) => {
                         <UsersContainer
                             />}
                         path='/users'
+                    />
+                    <Route render={() =>
+                        <Login
+                            />}
+                        path='/login'
                     />
                 </div>
             </div>
